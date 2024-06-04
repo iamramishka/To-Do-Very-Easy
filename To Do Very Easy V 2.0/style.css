@@ -1,0 +1,150 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+    min-width: 300px;  /* Set minimum width */
+    min-height: 500px; /* Set minimum height */
+}
+
+/* Style for buttons */
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style for input fields */
+input[type="text"], input[type="date"], input[type="time"], select {
+    padding: 8px;
+    margin: 5px;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #ccc;
+}
+
+/* Toggle and advanced features sections */
+#mode-toggle, #theme-toggle, #advanced-features {
+    margin-bottom: 10px;
+}
+
+/* Styles for different themes */
+body.light {
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+li.light {
+    background-color: #ddd;
+}
+
+li.dark {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Progress bar styling within list items, if you decide to add progress visualization */
+.progress-bar {
+    height: 20px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    width: 0%; /* Default width, should be dynamically changed by JavaScript */
+}
+
+/* Styling for switches */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Positioning for toggle area */
+#toggle-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Footer styling */
+#footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #777;
+}

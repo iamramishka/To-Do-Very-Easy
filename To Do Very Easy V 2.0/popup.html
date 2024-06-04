@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Advanced To-Do List</title>
+</head>
+<body>
+    <div id="toggle-area">
+        <label for="mode-toggle">Switch Mode:</label>
+        <label class="switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider round"></span>
+        </label>
+        <label for="theme-toggle">Switch Theme:</label>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div id="todo-list">
+        <input type="text" id="search-task" placeholder="Search tasks...">
+        <input type="text" id="new-task" placeholder="Add new task">
+        <div id="advanced-features" style="display: none;">
+            <label for="task-date">Due Date:</label>
+            <input type="date" id="task-date">
+            <label for="task-time">Due Time:</label>
+            <input type="time" id="task-time">
+            <label for="task-priority">Priority:</label>
+            <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
+            <label for="task-recurrence">Recurrence:</label>
+            <select id="task-recurrence">
+                <option value="none">None</option>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </div>
+        <button id="add-task">Add Task</button>
+        <ul id="tasks">
+            <!-- Tasks will be dynamically inserted here -->
+        </ul>
+    </div>
+    <button id="export-tasks">Export Tasks</button>
+    <input type="file" id="import-file" style="display: none;">
+    <button id="import-tasks">Import Tasks</button>
+    <script src="scripts/xlsx.full.min.js"></script>
+    <script src="popup.js"></script>
+    <div id="footer">
+        <p> © 2024 Ramishka Madhushan</p>
+    </div>
+</body>
+</html>
